@@ -1,3 +1,47 @@
+<head>
+	<style>
+		.container {
+  		display: flex;
+  		align-items: center;
+  		justify-content: center;
+		}
+
+		.card {
+  		width: 800px;
+  		height: 500px;
+  		border: 1px solid black;
+		}
+
+    .datosCard{
+			width: 40%;
+			height: 100%;
+			float: left;
+      display: flex;
+  			align-items: center;
+  			justify-content: center;
+			flex-direction: column;
+			background: red;
+		}
+
+    .centerCard{
+      width: 20%;
+			height: 100%;
+      float: left;
+    }
+
+		.messageCard{
+			width: 40%;
+			height: 100%;
+			float: right;
+			display: flex;
+  			align-items: center;
+  			justify-content: center;
+			flex-direction: column;
+      background: blue;
+		}
+
+	</style>
+</head>
 <body>
   <div id="root"></div>
 
@@ -20,24 +64,25 @@
 
     const BussCard = (props) => {
         return(
-          <div >
-  					<div >
-  						<div >
-							<h1>Nombre</h1>
-							<h1>email</h1>
-							<h1>Phone</h1>
-						</div>
+          <div className = "container">
+  					<div className = "card">
+  						  <div className = "datosCard">
+							    <h1>Nombre</h1>
+							    <h1>email</h1>
+							    <h1>Phone</h1>
+						    </div>
+
+                <div className = "centerCard">
+                </div>
 
 
-
-
-						<div >
-							<h2>
+					    	<div className = "messageCard">
+							  <h2>
   								Headline 
   							</h2>
 
 
-						</div>
+						    </div>
   					</div>
 				</div>
         )
