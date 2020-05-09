@@ -20,7 +20,7 @@
   			align-items: center;
   			justify-content: center;
 			flex-direction: column;
-			background: red;
+			background: grey;
 		}
 
     .centerCard{
@@ -67,9 +67,9 @@
           <div className = "container">
   					<div className = "card">
   						  <div className = "datosCard">
-							    <h1>Nombre</h1>
-							    <h1>email</h1>
-							    <h1>Phone</h1>
+							    <h1>{props.name}</h1>
+							    <h1>{props.email}</h1>
+							    <h1>{props.phone}</h1>
 						    </div>
 
                 <div className = "centerCard">
@@ -78,7 +78,7 @@
 
 					    	<div className = "messageCard">
 							  <h2>
-  								Headline 
+  								{props.headline}
   							</h2>
 
 
@@ -88,10 +88,21 @@
         )
     }
 
-
+    
+    BussCard.propTypes = {
+      name: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+      phone: PropTypes.string.isRequired,
+      headline: PropTypes.string.isRequired
+    }
     const app = (
       <>
-        <BussCard />
+        <BussCard 
+            name="Natanael Angeles"
+            email = "natandc740@gmail.com"
+            phone = "771-205-5665"
+            headline = "Ingeniero en Tecnologias de la Informacion y Cimunicaciones"
+        />
 
       </>
     );
